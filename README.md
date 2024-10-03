@@ -36,7 +36,6 @@ We combine datasets from various restoration tasks to form the training set. Her
     <th> Phase </th>
     <th> Source </th>
     <th> Task for</th>
-    <th> Conf. </th>
   </tr>
 </thead>
 <tbody>
@@ -45,35 +44,30 @@ We combine datasets from various restoration tasks to form the training set. Her
     <th>Train </th>
     <th> [<a href=https://pan.baidu.com/s/1wBE9wh9nXkvcJ6763CX1TA>Baidu Cloud(f1zz)</a>]</th>
     <th> Dehaze </th>
-    <th> CVPR 2018 </th>
   </tr>
   <tr>
     <td> Rain-13k </td>
     <th> Train & Test </th>
     <th>[<a href='https://drive.google.com/drive/folders/1Hnnlc5kI0v9_BtfMytC2LR5VpLAFZtVe'>Google Drive</a>] </th>
     <th> Derain </th>
-    <th> CVPR 2018 </th>
   </tr>
   <tr>
     <td> LOL-v2 </td>
     <th> Train & Test </th>
     <th> [Real Subset <a href=https://pan.baidu.com/share/init?surl=pQW7zq4yqU1zMRrlotxkXg>Baidu Cloud(65ay)</a>] / [Synthetic Subset <a href=https://pan.baidu.com/share/init?surl=t5OYgDgk3mQO53OXqW7QEA>Baidu Cloud(b14u)</a>] </th>
     <th> Low Light Enhancement </th>
-    <th> CVPR 2018 </th>
   </tr>
   <tr>
     <td> GoPro </td>
     <th> Train & Test </th>
     <th> [<a href=https://drive.google.com/file/d/1y4wvPdOG3mojpFCHTqLgriexhbjoWVkK/view?usp=sharing>Download</a>] </th>
     <th> Motion Deblur </th>
-    <th> CVPR 2018 </th>
   </tr>
     <tr>
     <td> LSDIR </td>
     <th> Train & Test </th>
     <th> [<a href=https://data.vision.ee.ethz.ch/yawli/index.html>HomePage</a>] </th>
     <th> Denoise DeJPEG DeBlur </th>
-    <th> CVPR 2018 </th>
   </tr>
   </tr>
     <tr>
@@ -81,7 +75,6 @@ We combine datasets from various restoration tasks to form the training set. Her
     <th> Test </th>
     <th> [<a href="https://www.kaggle.com/datasets/balraj98/synthetic-objective-testing-set-sots-reside?resource=download"l>Download</a>] </th>
     <th> Denoise DeJPEG DeBlur </th>
-    <th> CVPR 2018 </th>
   </tr>
   </tr>
     <tr>
@@ -89,7 +82,6 @@ We combine datasets from various restoration tasks to form the training set. Her
     <th> Test </th>
     <th> [<a href="https://github.com/clausmichele/CBSD68-dataset/tree/master"l>Download</a>] </th>
     <th> Denoise</th>
-    <th> CVPR 2018 </th>
   </tr>
 </tbody>
 </table>
