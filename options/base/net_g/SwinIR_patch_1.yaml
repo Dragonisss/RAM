@@ -1,0 +1,11 @@
+network_g:
+  type: SwinIR
+  patch_size: 1
+  in_chans: 3
+  embed_dim: 180
+  depths: [ 6, 6, 6, 6, 6, 6]
+  num_heads: [ 6, 6, 6, 6, 6, 6 ]
+  mlp_ratio: 2
+  window_size: 8
+  finetune_type: ~
+  upscale: 1

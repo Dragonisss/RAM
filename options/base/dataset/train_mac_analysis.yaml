@@ -1,0 +1,99 @@
+datasets:
+  val_1:
+    name: dehaze-ots
+    type: DehazeDataset
+    is_train: false
+    dataroot_gt: ./datasets/OTS_ALPHA/clear/clear_images/
+    dataroot_lq: ./datasets/OTS_ALPHA/haze/OTS/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false
+
+  val_3:
+    name: deraining-13k
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: ./datasets/rain13k/train/target/
+    dataroot_lq: ./datasets/rain13k/train/input/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false
+  val_4:
+    name: LowLight-LOL
+    type: LOLv2Dataset
+    is_train: false
+    dataroot: datasets/LOL-v2/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false
+  val_5:  # Dejpeg50
+    name: LSDIR_noise
+    type: LowCostDataset
+    is_train: false
+    dataroot_gt: datasets/LSDIR/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    augment:
+      origin: ~
+      noise: 
+        mode: random
+      blur: ~
+      jpeg: ~
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false
+  val_6:
+    name: MotionBlur-Gopro
+    type: GoProDataset
+    is_train: false
+    dataroot: datasets/gopro/train
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false
+  val_7:  # Deblur2.0
+    name: LSDIR_blur
+    type: LowCostDataset
+    is_train: false
+    dataroot_gt: datasets/LSDIR/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    augment:
+      origin: ~
+      noise: ~
+      blur: 
+        mode: random
+      jpeg: ~
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false
+  val_8:  # Dejpeg50
+    name: LSDIR_jpeg
+    type: LowCostDataset
+    is_train: false
+    dataroot_gt: datasets/LSDIR/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    augment:
+      origin: ~
+      noise: ~
+      blur: ~
+      jpeg: 
+        mode: random
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false

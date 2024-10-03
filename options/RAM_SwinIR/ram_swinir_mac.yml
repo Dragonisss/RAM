@@ -1,0 +1,17 @@
+base:
+- options/base/dataset/train_mac_analysis.yaml
+- options/base/net_g/SwinIR_patch_1.yaml #net_g
+# - options/base/net_finetune/unet_3_3.yaml #net_finetune
+
+name: ram_swinir_mac
+scale: 1
+num_gpu: 1
+gt_size: 64
+pretrained_ratio: 0.5
+num_samples: 10
+total_step: 200
+# path
+path:
+  pretrain_network_g: pretrained_model/ram_swinir_pretrain.pth
+  strict_load_g: false
+  param_key_g: params

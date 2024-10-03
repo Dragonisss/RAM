@@ -1,0 +1,33 @@
+base:
+- options/base/dataset/ram_test_dataset.yaml #test dataset
+- options/base/net_g/SwinIR_patch_1.yaml #net_g
+
+name: ram_swinir_benchmark
+model_type: RAMFinetuneModel
+scale: 1
+num_gpu: 1  # set num_gpu: 0 for cpu mode
+gt_size: 512
+
+# path
+path:
+  pretrain_network_g: pretrained_model/ram_swinir_finetune.pth
+  strict_load_g: false
+  param_key_g: params
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+  pbar: true
+  normalize:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: false

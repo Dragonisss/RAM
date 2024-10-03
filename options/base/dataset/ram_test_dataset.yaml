@@ -1,0 +1,170 @@
+datasets:
+  val_1:
+    name: SOTS-outdoor
+    type: DehazeDataset
+    is_train: false
+    dataroot_gt: datasets/SOTS/outdoor/clear/
+    dataroot_lq: datasets/SOTS/outdoor/hazy/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_2:
+    name: Deraining-rain100L
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/rain13k/test/Rain100L/target/
+    dataroot_lq: datasets/rain13k/test/Rain100L/input/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_2.1:
+    name: Deraining-rain100H
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/rain13k/test/Rain100H/target/
+    dataroot_lq: datasets/rain13k/test/Rain100H/input/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_2.2:
+    name: Deraining-Test100
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/rain13k/test/Test100/target/
+    dataroot_lq: datasets/rain13k/test/Test100/input/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_2.3:
+    name: Deraining-Test1200
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/rain13k/test/Test1200/target/
+    dataroot_lq: datasets/rain13k/test/Test1200/input/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_2.4:
+    name: Deraining-Test2800
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/rain13k/test/Test2800/target/
+    dataroot_lq: datasets/rain13k/test/Test2800/input/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_3.1:
+    name: BSD68-Gaussian15
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/CBSD68/CBSD68/original_png/
+    dataroot_lq: datasets/CBSD68/CBSD68/noisy15/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_3.2:
+    name: BSD68-Gaussian25
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/CBSD68/CBSD68/original_png/
+    dataroot_lq: datasets/CBSD68/CBSD68/noisy25/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_3.3:
+    name: BSD68-Gaussian50
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/CBSD68/CBSD68/original_png/
+    dataroot_lq: datasets/CBSD68/CBSD68/noisy50/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_4:
+    name: LowLight-LOL
+    type: PairedImageDataset
+    is_train: false
+    dataroot_gt: datasets/LOL/test/target/
+    dataroot_lq: datasets/LOL/test/input/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_9.1:
+    name: GoPro
+    type: GoProDataset
+    is_train: false
+    dataroot: datasets/gopro/test
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    io_backend:
+      type: disk
+    crop_test: false
+    twinsmask: false
+  val_6:  # Deblur2.0
+    name: LSDIR_blur
+    type: LowCostDataset
+    is_train: false
+    dataroot_gt: datasets/LSDIR-val1/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    augment:
+      origin: ~
+      noise: ~
+      blur: 
+        mode: fix
+        sigma: 2.0
+      jpeg: ~
+      sr: ~
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false
+  val_7:  # Dejpeg50
+    name: LSDIR_jpeg
+    type: LowCostDataset
+    is_train: false
+    dataroot_gt: datasets/LSDIR-val1/
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    augment:
+      origin: ~
+      noise: ~
+      blur: ~
+      jpeg: 
+        mode: fix
+        q: 50
+      sr: ~
+    io_backend:
+      type: disk
+    test_crop: true
+    twinsmask: false
