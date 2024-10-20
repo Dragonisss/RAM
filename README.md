@@ -11,6 +11,13 @@ This is the official PyTorch codes for the paper.
 - RAM is a Blind All-In-One Image Restoration framework that can simultaneously handle <b style='font-size: large'>7 Restoration Tasks</b>  and achieve <b style='font-size: large'>SOTA performance</b> !
 - RAM focus on tackling how to extract <b style='font-size: large'>Image Prior</b> instead of degradation prior from diverse corrupted images by Leveraging <b style='font-size: large'>Mask Image Modeling</b>.
 
+## :newspaper: News
+<ul>
+  <li><b>Oct 20, 2024</b>: Release pretrained weights on <a href="https://drive.google.com/drive/folders/1CDX02vmpPoeWBahvvg2OAH8jwhtBwwmB?usp=drive_link">Google Drive</a>.</li>
+  <li><b>Oct 3, 2024</b>: Release related code of our paper.</li>
+</ul>
+
+
 ## :wrench: Dependencies and Installation
 1. Clone and enter our repository:
     ```bash
